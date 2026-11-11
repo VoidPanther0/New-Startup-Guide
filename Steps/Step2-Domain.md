@@ -1,14 +1,23 @@
-# Step 3 — Find & Choose a Domain (.com)
+# Part 2 — Domain
+
+> Pick the `.com` domain that matches your main keyword. **Choose it now, buy it later.**
+
+**Step in this part:** Step 3
+
+---
+
+## Step 3 — Find & Choose a Domain (.com)
 
 **Goal:** Find a `.com` domain that contains your main keyword. Buy it last.
 
-## Tool
+### Tool
 
 - Instant Domain Search: https://instantdomainsearch.com/
 
-## How to find
+### How to find
 
-1. Take your main keyword from Step 2 (example: "Font Finder").
+1. Take your main keyword from Step 2 (example: "Font Finder") — or a golden keyword
+   from Step 6 if you already found one.
 2. Search it on https://instantdomainsearch.com/.
 3. The domain **must be `.com`**.
 4. **Google suggest trick:** In Google, type your keyword + a space. Google
@@ -17,7 +26,7 @@
    - Example result: `fontfinderai.com`
 5. Choose the best available `.com` (short, memorable, keyword included).
 
-## Rules
+### Rules
 
 - The **main keyword** must appear in the domain name.
 - **Only `.com`** domains.
@@ -25,11 +34,13 @@
 - Keep it short, memorable, easy to spell.
 - Avoid hyphens and numbers if possible.
 
-## Important
+### Important
 
 **Buy the domain only after the website is built (Step 4).** If you buy a domain
 with no website, the domain and money are wasted.
 
-## Deliverable
+### Deliverable
 
 Your chosen `.com` domain name (not purchased yet), ready for Step 4.
+
+**Next:** [Step 4 — Build with AI (Write the Code)](Step3-Build.md) (Part 3)
