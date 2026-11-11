@@ -4,11 +4,11 @@
 >
 > Free tools · Give it rules · Small steps · Test in browser · Internationalization
 
-**Step in this part:** Step 4
+**Part 3 — Build**
 
 ---
 
-## Step 4 — Build with AI (Write the Code)
+## Build with AI (Write the Code)
 
 **Goal:** Use AI to write the website code. No manual typing — you describe, it builds.
 
@@ -187,7 +187,7 @@ Browser mein `http://localhost:4321` khul jayega. Har change turant dikhega.
 
 ---
 
-## ✍️ The Universal Prompt (Step 1 of building)
+## ✍️ The Universal Prompt (pehla step of building)
 
 Claude Code (ya OpenCode) mein ye prompt paste karo — `[ ]` wali jagah apni values bharo:
 
@@ -639,4 +639,4 @@ auto build + deploy ho jayega.
 
 A working website, ready to go live — built by AI, at $0 cost.
 
-**Next:** [Step 5 — Deploy for $0](Step4-Deploy.md) (Part 4)
+**Next:** [Part 4 — Deploy for $0](Step4-Deploy.md)

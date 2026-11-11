@@ -13,59 +13,61 @@ free tools (Reddit, Quora, Ahrefs, Instant Domain Search, Astro, Cloudflare) and
 New Startup Guide/
 ├── README.md
 └── Steps/
-    ├── Step1-Research.md       # Part 1 — Research & Validation (Step 1, 2, 5, 6)
-    ├── Step2-Domain.md         # Part 2 — Domain (Step 3)
-    ├── Step3-Build.md          # Part 3 — Build (Step 4)
-    ├── Step4-Deploy.md         # Part 4 — Deploy (Step 5)
-    ├── Step5-Cloudfare.md      # Part 5 — Cloudflare (Step 6)
-    ├── Step6-SearchConsole.md  # Part 6 — Search Console (Step 7)
-    └── Step7-Earnings.md       # Part 7 — Earnings (Step 8)
+    ├── Step1-Research.md       # Part 1 — Research & Validation
+    ├── Step2-Domain.md         # Part 2 — Domain
+    ├── Step3-Build.md          # Part 3 — Build
+    ├── Step4-Deploy.md         # Part 4 — Deploy
+    ├── Step5-Cloudfare.md      # Part 5 — Cloudflare
+    ├── Step6-SearchConsole.md  # Part 6 — Search Console
+    └── Step7-Earnings.md       # Part 7 — Earnings
 ```
 
-## Steps — 7 parts · 8 steps
+## The 7 Parts
 
 ### Part 1 — Research & Validation
 
-- **Step 1 — Find the Problem**
-- **Step 2 — Is it Worth it? (Idea Verification)**
-- **Step 5 — Competitor (Rival) Analysis**
-- **Step 6 — Traffic Checker & Golden Keyword**
+Find a real problem, prove demand, study rivals, and pick the keywords to attack.
+
+- **1.1** Find the Problem
+- **1.2** Is it Worth it? (Idea Verification)
+- **1.3** Competitor (Rival) Analysis
+- **1.4** Traffic Checker & Golden Keyword
 
 ➡️ [Steps/Step1-Research.md](Steps/Step1-Research.md)
 
 ### Part 2 — Domain
 
-- **Step 3 — Find & Choose a Domain (.com)**
+- **2.1** Find & Choose a Domain (.com)
 
 ➡️ [Steps/Step2-Domain.md](Steps/Step2-Domain.md)
 
 ### Part 3 — Build
 
-- **Step 4 — Build with AI (Write the Code)**
+- **3.1** Build with AI (Write the Code)
 
 ➡️ [Steps/Step3-Build.md](Steps/Step3-Build.md)
 
 ### Part 4 — Deploy
 
-- **Step 5 — Deploy for $0 (Cloudflare Pages & Workers)**
+- **4.1** Deploy for $0 (Cloudflare Pages & Workers)
 
 ➡️ [Steps/Step4-Deploy.md](Steps/Step4-Deploy.md)
 
 ### Part 5 — Cloudflare
 
-- **Step 6 — Cloudflare (Deploy + Connect Domain)** — nameservers → SSL → email → DNS
+- **5.1** Cloudflare (Deploy + Connect Domain) — nameservers → SSL → email → DNS
 
 ➡️ [Steps/Step5-Cloudfare.md](Steps/Step5-Cloudfare.md)
 
 ### Part 6 — Search Console
 
-- **Step 7 — Analysis & Webmaster Tools** — GA4 · GSC verify · sitemap · Request Indexing · Bing · IndexNow
+- **6.1** Analysis & Webmaster Tools — GA4 · GSC verify · sitemap · Request Indexing · Bing · IndexNow
 
 ➡️ [Steps/Step6-SearchConsole.md](Steps/Step6-SearchConsole.md)
 
 ### Part 7 — Earnings
 
-- **Step 8 — Earning (Google AdSense)** — approval · ads.txt · live ads · repeat × 12
+- **7.1** Earning (Google AdSense) — approval · ads.txt · live ads · repeat × 12
 
 ➡️ [Steps/Step7-Earnings.md](Steps/Step7-Earnings.md)
 
@@ -93,7 +95,7 @@ New Startup Guide/
 
 > 💡 **Expectation set:** AdSense se pehle koi earning nahi hoti. Pehla paisa aata hai
 > jab traffic aaye — 4–6 months. Isliye **ek tool pe rukna mat**, har month next tool banao
-> ([Step 8 — Repeat × 12](Steps/Step7-Earnings.md)).
+> ([Part 7 — Earnings](Steps/Step7-Earnings.md)).
 
 ## The stack
 
@@ -109,7 +111,7 @@ New Startup Guide/
 - [Ahrefs Free Keyword Generator](https://ahrefs.com/keyword-generator)
 - [Ahrefs Traffic Checker](https://ahrefs.com/traffic-checker)
 - [Instant Domain Search](https://instantdomainsearch.com/)
-- [Astro](https://astro.build/) + [Tailwind v4](https://tailwindcss.com/)
+- [Astro](https://astro.build/) + Tailwind v4
 - [Cloudflare Pages/Workers](https://www.cloudflare.com/) ($0)
 - [Google Analytics 4](https://analytics.google.com) + [Search Console](https://search.google.com/search-console/about)
 - [Bing Webmaster Tools](https://www.bing.com/webmasters/about)

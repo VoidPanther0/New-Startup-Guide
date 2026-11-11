@@ -4,11 +4,11 @@
 >
 > Ye part **har website ke liye same** hai — Pages ho ya Workers, logic aur links ek hi rehte hain.
 
-**Step in this part:** Step 6
+**Part 5 — Cloudflare**
 
 ---
 
-## Step 6 — Cloudflare (Deploy + Connect Domain)
+## Cloudflare (Deploy + Connect Domain)
 
 **Goal:** Website ko Cloudflare pe deploy karna, apna `.com` domain connect karna, free SSL
 aur free email lena — sab **$0** mein.
@@ -39,13 +39,13 @@ aur free email lena — sab **$0** mein.
    - ⚠️ **Existing DNS records DELETE mat karna** (purane MX / email / subdomains) — warna
      email aur purani services band ho jayengi
 
-> 💡 Domain abhi kharida nahi hai? Pehle registrar se kharido (Step 3) — phir wapas yahan.
+> 💡 Domain abhi kharida nahi hai? Pehle registrar se kharido (Part 2) — phir wapas yahan.
 
 ---
 
 ## 2. Deploy (Pages ya Workers)
 
-Poora deploy flow + AI prompts → **[Part 4 — Deploy](Step4-Deploy.md)** (Step 5)
+Poora deploy flow + AI prompts → **[Part 4 — Deploy](Step4-Deploy.md)**
 
 | | Pages | Workers |
 |---|---|---|
@@ -53,7 +53,7 @@ Poora deploy flow + AI prompts → **[Part 4 — Deploy](Step4-Deploy.md)** (Ste
 | Requests | Unlimited bandwidth | 100,000/day free, uske baad pay |
 | Deploy | `npm run deploy` | `npm run deploy` (`wrangler deploy`) |
 
-**Deploy ke baad** → wapas yahan (Step 4 — domain connect).
+**Deploy ke baad** → wapas yahan (Part 4 — domain connect).
 
 ---
 
@@ -438,7 +438,7 @@ Pricing: https://developers.cloudflare.com/email-service/platform/pricing/
 ## 10. Google Search Console (optional but recommended)
 
 > 📖 Poora guide (verification, sitemap submit, request indexing, Bing, IndexNow) →
-> **[Part 6 — Search Console](Step6-SearchConsole.md)** — Step 7
+> **[Part 6 — Search Console](Step6-SearchConsole.md)**
 
 1. https://search.google.com/search-console
 2. **Add property** → Domain type (`yourdomain.com`)
@@ -446,7 +446,7 @@ Pricing: https://developers.cloudflare.com/email-service/platform/pricing/
 4. **Sitemaps** → `sitemap.xml` submit karo
 5. **URL Inspection** → `https://yourdomain.com` → **Request indexing**
 
-> Ab se Google tumhari site ko crawl karega. Step 1-2 ke traffic ke liye zaroori hai.
+> Ab se Google tumhari site ko crawl karega. Part 1 ke traffic ke liye zaroori hai.
 
 ---
 
@@ -540,4 +540,4 @@ Pricing: https://developers.cloudflare.com/email-service/platform/pricing/
 Your live website on your own `.com` domain — free SSL, Cloudflare global CDN, free email
 forwarding, auto-deploy on every commit, **$0 hosting cost**.
 
-**Next:** [Step 7 — Analysis & Webmaster Tools](Step6-SearchConsole.md) (Part 6)
+**Next:** [Part 6 — Analysis & Webmaster Tools](Step6-SearchConsole.md)

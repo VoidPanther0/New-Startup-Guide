@@ -5,11 +5,11 @@
 > AdSense Approval (real content + policy pages) · Common Rejects (thin content, low value) ·
 > Live Ads (placement without killing UX) · Repeat × 12 (next tool, next month)
 
-**Step in this part:** Step 8
+**Part 7 — Earnings**
 
 ---
 
-## Step 8 — Earning (Google AdSense)
+## Earning (Google AdSense)
 
 **Goal:** Apni site se paise kamana — AdSense approval → ads live → payment.
 

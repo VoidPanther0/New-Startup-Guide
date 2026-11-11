@@ -3,11 +3,11 @@
 > **Analysis & Webmaster tools.** Google Analytics · Search Console · Bing Webmaster Tools ·
 > IndexNow · Sitemaps · Request Indexing
 
-**Step in this part:** Step 7
+**Part 6 — Search Console**
 
 ---
 
-## Step 7 — Analysis & Webmaster Tools
+## Analysis & Webmaster Tools
 
 **Goal:** Site ka data dekhna (Analytics), Google ko batana ki site exist karti hai
 (Search Console + sitemap + indexing), aur Bing/Emoji search engines ko bhi.
@@ -305,4 +305,4 @@ Your site **fully indexed** — Google Analytics me live traffic dikh raha hai, 
 Console me verified + sitemap submitted, Bing me imported + IndexNow se instant indexing,
 aur har page ki URL inspection me "on Google" ✅.
 
-**Next:** [Step 8 — Earning (Google AdSense)](Step7-Earnings.md) (Part 7)
+**Next:** [Part 7 — Earning (Google AdSense)](Step7-Earnings.md)

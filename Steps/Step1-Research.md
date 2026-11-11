@@ -3,21 +3,21 @@
 > Find a real problem, verify the demand, study the rivals, and find **golden
 > low-competition keywords** before you touch a single line of code.
 
-**Steps in this part:** Step 1 → Step 2 → Step 5 → Step 6
+**Steps in this part:** 1.1 → 1.2 → 1.3 → 1.4
 
 > 💾 **Install kuch nahi karna** — Reddit, Quora, Ahrefs sab browser-based tools hain.
 > Sirf ek browser chahiye. (Coding ke liye install commands → [Part 3 — Build](Step3-Build.md))
 
 | Step | Topic | What you get |
 |------|-------|---------------|
-| [Step 1](#step-1--find-the-problem) | Find the Problem | 5–10 problem statements |
-| [Step 2](#step-2--is-it-worth-it-idea-verification) | Is it Worth it? | Shortlisted keywords + volume |
-| [Step 5](#step-5--competitor-rival-analysis) | Competitor Analysis | Competitor table + your edge |
-| [Step 6](#step-6--traffic-checker--golden-keyword) | Traffic Checker | Golden keyword list |
+| [1.1 Find the Problem](#11-find-the-problem) | Find the Problem | 5–10 problem statements |
+| [1.2 Is it Worth it?](#12-is-it-worth-it-idea-verification) | Is it Worth it? | Shortlisted keywords + volume |
+| [1.3 Competitor Analysis](#13-competitor-rival-analysis) | Competitor Analysis | Competitor table + your edge |
+| [1.4 Traffic Checker](#14-traffic-checker--golden-keyword) | Traffic Checker | Golden keyword list |
 
 ---
 
-## Step 1 — Find the Problem
+## 1.1 Find the Problem
 
 **Goal:** Find real problems people actually have, so your website solves something valuable.
 
@@ -50,14 +50,13 @@
 
 ### Deliverable
 
-A list of **5–10 problem statements** (one sentence each), ready for Step 2
-(Is it Worth it?).
+A list of **5–10 problem statements** (one sentence each), ready for **1.2 Is it Worth it?**
 
-**Next:** [Step 2 — Is it Worth it? (Idea Verification)](#step-2--is-it-worth-it-idea-verification)
+**Next:** [1.2 Is it Worth it? (Idea Verification)](#12-is-it-worth-it-idea-verification)
 
 ---
 
-## Step 2 — Is it Worth it? (Idea Verification)
+## 1.2 Is it Worth it? (Idea Verification)
 
 **Goal:** Verify the idea before building. Use free keyword tools.
 
@@ -67,7 +66,7 @@ A list of **5–10 problem statements** (one sentence each), ready for Step 2
 
 ### Process
 
-1. Take the problem phrases from Step 1.
+1. Take the problem phrases from **1.1 Find the Problem**.
 2. Enter them into the Ahrefs free keyword generator.
 3. Check the **search volume** for each idea.
 4. **Make sure volume is around 100 and 1000** (target band: ~100 to ~1000 monthly searches).
@@ -80,26 +79,25 @@ A list of **5–10 problem statements** (one sentence each), ready for Step 2
 > Note: "100 and 1000 volume" means the monthly search volume should sit in the
 > 100–1000 range — the sweet spot for a new website.
 
-**Important:** Do not buy a domain yet. You will *choose* the domain in Step 3 (Part 2),
-but buy it only after the website is built in Step 4 (Part 3) — buying a domain with no
+**Important:** Do not buy a domain yet. You will *choose* the domain in **Part 2 — Domain**,
+but buy it only after the website is built in **Part 3 — Build** — buying a domain with no
 website wastes money.
 
 ### Deliverable
 
-Shortlisted ideas, each with: **keyword + estimated volume + intent**, ready for Step 5
-(Competitor Analysis).
+Shortlisted ideas, each with: **keyword + estimated volume + intent**, ready for **1.3 Competitor Analysis**.
 
-**Next:** [Step 5 — Competitor (Rival) Analysis)](#step-5--competitor-rival-analysis)
+**Next:** [1.3 Competitor (Rival) Analysis)](#13-competitor-rival-analysis)
 
 ---
 
-## Step 5 — Competitor (Rival) Analysis
+## 1.3 Competitor (Rival) Analysis
 
 **Goal:** Analyze competitors (rivals), find weaknesses and bugs.
 
 ### Process
 
-1. Google your shortlisted keywords from Step 2.
+1. Google your shortlisted keywords from **1.2 Is it Worth it?**
 2. Open the **top 5–10 results** (your competitors/rivals).
 3. For each competitor, note:
    - What they do well.
@@ -118,18 +116,18 @@ A competitor table:
 
 Plus your chosen differentiator.
 
-**Next:** [Step 6 — Traffic Checker & Golden Keyword](#step-6--traffic-checker--golden-keyword)
+**Next:** [1.4 Traffic Checker & Golden Keyword](#14-traffic-checker--golden-keyword)
 
 ---
 
-## Step 6 — Traffic Checker & Golden Keyword
+## 1.4 Traffic Checker & Golden Keyword
 
 **Tool:** https://ahrefs.com/traffic-checker/
 
 ### Process
 
 1. Go to Ahrefs Traffic Checker.
-2. Enter the **competitor domains** from Step 5.
+2. Enter the **competitor domains** from **1.3 Competitor Analysis**.
 3. Check:
    - How much traffic each site gets.
    - **Which keywords** they rank for.
@@ -144,4 +142,4 @@ Plus your chosen differentiator.
 
 A list of **golden keywords** with competition notes and the website each came from.
 
-**Next:** [Step 3 — Find & Choose a Domain (.com)](Step2-Domain.md) (Part 2)
+**Next:** [Part 2 — Domain](Step2-Domain.md)

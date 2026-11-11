@@ -4,11 +4,11 @@
 >
 > Push to GitHub · Connect Domain · Workers for APIs · Global CDN · Free Email · Noindex.pages.dev
 
-**Step in this part:** Step 5
+**Part 4 — Deploy**
 
 ---
 
-## Step 5 — Deploy for $0 (Cloudflare Pages & Workers)
+## Deploy for $0 (Cloudflare Pages & Workers)
 
 **Goal:** Website ko live karna — free, fast, aur apne `.com` domain pe.
 
@@ -315,7 +315,7 @@ pattern `admin` → action *Send to an email* → gmail
 - `workers.dev` / `pages.dev` indexing band (Section 6)
 
 > 📖 **Details, troubleshooting table aur saare links:**
-> **[Part 5 — Cloudflare](Step5-Cloudfare.md)** — Step 6
+> **[Part 5 — Cloudflare](Step5-Cloudfare.md)**
 
 ---
 
@@ -349,7 +349,7 @@ pattern `admin` → action *Send to an email* → gmail
 4. Verify → site live with **HTTPS** 🔒
 
 **Workers:** Settings → **Domains & Routes** → **Add Custom Domain** → aur wahi
-`workers.dev` **Disable** kar do (Step 3 ka checklist yaad karo).
+`workers.dev` **Disable** kar do (Part 3 ka checklist yaad karo).
 
 ---
 
@@ -412,7 +412,7 @@ temporary URL doesn't compete with my real domain. I'll remove it later.
 Site `*.pages.dev` pe live ho chuki hai, ab asli `.com` domain kharido aur connect karo.
 
 > 📖 **Poora walkthrough (nameservers → SSL → email → troubleshooting) ke liye dekho:**
-> **[Part 5 — Cloudflare](Step5-Cloudfare.md)** — Step 6
+> **[Part 5 — Cloudflare](Step5-Cloudfare.md)**
 
 ### 1. Registrar se domain kharido
 

@@ -2,7 +2,7 @@
 
 > Pick the `.com` domain that matches your main keyword. **Choose it now, buy it later.**
 
-**Step in this part:** Step 3
+**Part 2 — Domain**
 
 > 💾 **Install kuch nahi karna** — Instant Domain Search browser mein chalta hai.
 > Domain kharidna registrar se hota hai (Namecheap / Cloudflare / Porkbun).
@@ -10,7 +10,7 @@
 
 ---
 
-## Step 3 — Find & Choose a Domain (.com)
+## Find & Choose a Domain (.com)
 
 **Goal:** Find a `.com` domain that contains your main keyword. Buy it last.
 
@@ -20,8 +20,8 @@
 
 ### How to find
 
-1. Take your main keyword from Step 2 (example: "Font Finder") — or a golden keyword
-   from Step 6 if you already found one.
+1. Take your main keyword from **1.2 Is it Worth it?** (example: "Font Finder") — or a
+   golden keyword from **1.4 Traffic Checker** if you already found one.
 2. Search it on https://instantdomainsearch.com/.
 3. The domain **must be `.com`**.
 4. **Google suggest trick:** In Google, type your keyword + a space. Google
@@ -40,7 +40,7 @@
 
 ### Important
 
-**Buy the domain only after the website is built (Step 4).** If you buy a domain
+**Buy the domain only after the website is built (Part 3 — Build).** If you buy a domain
 with no website, the domain and money are wasted.
 
 ---
@@ -93,11 +93,11 @@ first-year price AND the renewal price for each one, and tell me which is cheape
   (at-cost, zero markup) se kharidna sabse sasta padta hai.
 >
 > 📖 **Domain actually kharidna + Cloudflare se connect karna** (nameservers, SSL, email,
-> troubleshooting) → **[Part 5 — Cloudflare](Step5-Cloudfare.md)** — Step 6
+> troubleshooting) → **[Part 5 — Cloudflare](Step5-Cloudfare.md)**
 
 ### Deliverable
 
-Your chosen `.com` domain name (not purchased yet), ready for Step 4.
+Your chosen `.com` domain name (not purchased yet), ready for **Part 3 — Build**.
 
-**Next:** [Step 4 — Build with AI (Write the Code)](Step3-Build.md) (Part 3)
+**Next:** [Part 3 — Build with AI](Step3-Build.md)
 → phir domain kharidna + connect → [Part 5 — Cloudflare](Step5-Cloudfare.md)
