@@ -42,16 +42,29 @@ Agar tumhara site **static** hai (Astro ka default `output: 'static'`), toh Clou
 
 ## ✅ Pre-Build Checklist (device pe install hona chahiye)
 
-| # | Tool | Install / Verify | Why |
-|---|------|------------------|-----|
-| 1 | **Git** | `winget install --id Git.Git -e` | Version control + GitHub push |
-| 2 | **Node.js** (v20.19+ / v22.23.4+) | `winget install --id OpenJS.NodeJS.LTS -e` | Astro chahiye |
-| 3 | **VS Code** | `winget install --id Microsoft.VisualStudioCode -e` | Editor |
-| 4 | **Astro Extension** (VS Code) | Extensions panel → "Astro" → Install | Syntax + IntelliSense |
-| 5 | **GitHub Account** | https://github.com/signup | Repo + Pages/Workers deploy |
-| 6 | **Cloudflare Account** | https://dash.cloudflare.com/sign-up | Free hosting |
-| 7 | **AI CLI** | `npm i -g @anthropic-ai/claude-code` ya OpenCode | Coding agent |
-| 8 | **Terminal** | Git Bash / PowerShell | Commands |
+| # | Tool | Install (Windows) | Install (macOS / Linux) | Why |
+|---|------|-------------------|------------------------|-----|
+| 1 | **Git** | `winget install --id Git.Git -e` | `brew install git` · `sudo apt install git` | Version control + GitHub push |
+| 2 | **Node.js** (v20.19+ / v22.23.4+) | `winget install --id OpenJS.NodeJS.LTS -e` | `brew install node` · [nvm](https://github.com/nvm-sh/nvm) | Astro chahiye |
+| 3 | **VS Code** | `winget install --id Microsoft.VisualStudioCode -e` | `brew install --cask visual-studio-code` | Editor |
+| 4 | **GitHub CLI** (`gh`) | `winget install --id GitHub.cli --source winget` | `brew install gh` | Repo create + push (Part 4) |
+| 5 | **Wrangler** (Cloudflare) | `npm install -g wrangler` | same | Deploy CLI (Part 4) |
+| 6 | **Astro Extension** (VS Code) | Extensions panel → "Astro" → Install | same | Syntax + IntelliSense |
+| 7 | **GitHub Account** | https://github.com/signup | same | Repo + auto deploy |
+| 8 | **Cloudflare Account** | https://dash.cloudflare.com/sign-up | same | Free hosting |
+| 9 | **AI CLI** | `npm i -g @anthropic-ai/claude-code` | same | Coding agent (OpenCode bhi chalega) |
+| 10 | **Terminal** | Git Bash / PowerShell | Terminal | Commands |
+
+**One-time setup commands:**
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+gh auth login
+npx wrangler login
+```
+
+> ⚠️ **Windows note:** `winget` install PATH modify karta hai — naya terminal window kholo.
 
 > ⚠️ **VS Code mein pehle hi** Astro extension install kar lo — VS Code open karte hi
 > extensions panel (Ctrl+Shift+X) mein "Astro" search karke install karo.
@@ -216,6 +229,7 @@ after each step.
 - **Mobile responsiveness** — Chrome DevTools mein test karo
   (right-click → Inspect → mobile icon).
 - **Multiple language support** — har language ke liye alag URL path, international SEO boost.
+  Full guide + prompts → [🌐 Multi-language Support (i18n)](#-multi-language-support-i18n--international-seo)
 
 ---
 
@@ -287,6 +301,150 @@ Make the webside mobile responsive
 
 ---
 
+## 🌐 Multi-language Support (i18n) — International SEO
+
+**Official recipe:** https://docs.astro.build/en/recipes/i18n/
+**Built-in i18n routing:** https://docs.astro.build/en/guides/internationalization/
+
+Ek hi tool 8 languages me rank kar sakta hai — har language ka apna URL path + hreflang.
+
+### AI prompt (seedha paste karo)
+
+```text
+Use the Astro i18n recipe (https://docs.astro.build/en/recipes/i18n/) to provide multi lang
+support to this website so that it ranks on other languages keywords.
+
+provide support for:
+Español
+日本語
+Français
+Deutsch
+Português
+한국어
+Italiano
+
+note: Add hreflang markup for each language.
+```
+
+### 1. `astro.config.mjs` — i18n config
+
+```js
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  site: 'https://yourdomain.com',
+  i18n: {
+    locales: ['en', 'es', 'ja', 'fr', 'de', 'pt', 'ko', 'it'],
+    defaultLocale: 'en',
+    routing: { prefixDefaultLocale: false },
+  },
+});
+```
+
+### 2. Folder structure (har language ka folder)
+
+```
+src/pages/
+├── index.astro        ← English (default, URL pe /en nahi)
+├── es/                ← Español
+├── ja/                ← 日本語
+├── fr/                ← Français
+├── de/                ← Deutsch
+├── pt/                ← Português
+├── ko/                ← 한국어
+└── it/                ← Italiano
+```
+
+### 3. hreflang markup (`BaseLayout.astro` head)
+
+```astro
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const locales = ['en', 'es', 'ja', 'fr', 'de', 'pt', 'ko', 'it'];
+const lang = Astro.currentLocale ?? 'en';
+---
+<html lang={lang}>
+  <head>
+    {locales.map((l) => (
+      <link
+        rel="alternate"
+        hreflang={l}
+        href={new URL(getRelativeLocaleUrl(Astro.url.pathname, l), Astro.site)}
+      />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={new URL(Astro.url.pathname, Astro.site)} />
+  </head>
+</html>
+```
+
+### 4. Language codes
+
+| Language | Code | hreflang |
+|----------|------|----------|
+| English | `en` | `en` |
+| Español | `es` | `es` |
+| 日本語 | `ja` | `ja` |
+| Français | `fr` | `fr` |
+| Deutsch | `de` | `de` |
+| Português | `pt` | `pt-BR` (Brazil focus) |
+| 한국어 | `ko` | `ko` |
+| Italiano | `it` | `it` |
+
+### 5. i18n rules (SEO ke liye zaroori)
+
+- ✅ `<html lang="...">` har page pe sahi language
+- ✅ hreflang **reciprocal** hona chahiye — har page apne saare versions ko point kare
+- ✅ `x-default` default/fallback page ke liye
+- ✅ Same slug sab languages me (path same, prefix alag) — URL structure consistent rehta hai
+- ✅ Sitemap me **sab languages** include karo (`@astrojs/sitemap` i18n support karta hai)
+- ✅ **Local keywords translate karo** — sirf UI nahi:
+  `"online ruler"` → `règle en ligne` · `regla en línea` · `线上定規` · `온라인 자` · `regua online`
+- ⚠️ **Machine translation alone mat karo** — Google low-value translated content detect kar
+  leta hai. Native-level translation + local keyword research zaroori hai.
+
+---
+
+## 🎯 Single Language Website Convert (optional)
+
+Agar tumhe **sirf ek language** chahiye (e.g., sirf Brazil + Portuguese countries me rank),
+toh poori website ka content hi convert kar do — `/lang/` pages nahi.
+
+### AI prompt (seedha paste karo)
+
+```text
+this is my english website, convert this full website to rank on "Keywoard Name" and domain : [Name Domain]] we want to rank in brazil and every portuguese countries.
+
+Add hreflang markup of [Languages].
+
+NOTE: Do not just give a /lang pages, convert this whole website to a [Name] website only. we only want [Name] language no other languages.
+
+Change the full content of this website to rank on main keyword: [Keywoard]
+Supportive keywords: [....]
+```
+
+### Kab kaunsa approach
+
+| Situation | Approach |
+|-----------|----------|
+| Har market ka **alag domain** hai (`br.com`, `es.com`) | ✅ **Single-language convert** per domain |
+| Ek hi domain pe 8 languages | ✅ **Multi-language i18n** (upar wala section) |
+| Sirf **ek country** target karna hai | ✅ **Single-language convert** (same domain, no `/lang/`) |
+
+### Convert ke baad checklist
+
+- [ ] `<html lang="pt-BR">` set (sahi language code)
+- [ ] hreflang sirf usi language ka + `x-default`
+- [ ] `<title>` + `<meta description>` **local keyword** se (English keyword translate karke mat rakhna)
+- [ ] 600-word home content translated + localized (R$, cm, dd/mm/yyyy)
+- [ ] FAQ + JSON-LD translated
+- [ ] Images ke `alt` text translated
+- [ ] `sitemap.xml` + `robots.txt` updated
+- [ ] `canonical` tag sahi URL pe
+- [ ] `astro.config.mjs` me `site` + `i18n.defaultLocale` update
+
+---
+
 ## 🎨 Favicon banao
 
 1. Logo banao — https://logofa.st/
@@ -324,6 +482,8 @@ This website should be a multi-page application (MPA) for best SEO.
 
 > ⚠️ Ye pages **home page se clearly accessible** hone chahiye — AdSense reviewers ye
 > check karte hain. Header **aur** footer dono mein link karo.
+>
+> 📖 AdSense approval ke liye poora checklist → **[Part 7 — Earnings](Step7-Earnings.md)**
 
 ---
 
@@ -352,19 +512,109 @@ correct way to add it.
 
 ---
 
+## 📊 Google Analytics (GA4)
+
+```text
+Add Google Analytics 4 (GA4) to this Astro site using gtag.js. Use my measurement ID
+G-XXXXXXXXXX. Put the script in the shared BaseLayout head so it loads on every page,
+load it with async, and don't inject it twice.
+```
+
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+```
+
+> Measurement ID kahan se milega: Google Analytics → Admin → Property → Data Streams →
+> **Web → Measurement ID** (`G-XXXXXXXXXX`).
+>
+> 📖 Poora GA4 setup + AdSense linking guide → **[Part 6 — Search Console](Step6-SearchConsole.md)**
+
+---
+
+## 🛡️ Cloudflare `_headers` file (security + cache rules)
+
+```text
+Create a `public/_headers` file for Cloudflare. Add security headers for all routes
+(X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy,
+Strict-Transport-Security) and long cache-control for static assets.
+```
+
+```bash
+# public/_headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+```
+
+> File `public/` folder mein honi chahiye — Astro build ke baad `dist/` mein copy ho jayegi.
+>
+> 💡 `pages.dev` URL ko Google se index hone se rokne ke liye isi file mein
+> `X-Robots-Tag: noindex` rule add karo → [Part 4 — Deploy](Step4-Deploy.md)
+
+### 🔒 Workers use kar rahe ho? `workers.dev` band karo
+
+Jab `.com` domain connect ho jaye, toh `workers.dev` URL **disable** kar do — warna do jagah
+se site live rahegi (duplicate content + SEO split).
+
+**Dashboard se:**
+
+1. Cloudflare dashboard → **Workers & Pages**
+2. Apna Worker select karo → **Settings** → **Domains & Routes**
+3. `workers.dev` ke paas **Disable** pe click karo → confirm
+
+**Wrangler config se (zaroori!):**
+
+```toml
+# wrangler.toml
+workers_dev = false
+```
+
+```jsonc
+// wrangler.jsonc
+{
+  "workers_dev": false
+}
+```
+
+> ⚠️ **Warning:** Agar dashboard se disable kiya par `workers_dev = false` config mein nahi
+> likha, toh **next deploy par wapas enable** ho jayega. Dono karo.
+
+---
+
 ## ✅ Final Checklist (ship se pehle)
 
+- [ ] **Website banaya** — Universal Prompt se, competitor URL diya hua
+- [ ] **Logo banaya** — https://logofa.st/
+- [ ] **Favicon banaya** — https://realfavicongenerator.net/ → `public/` mein files + link tags
+- [ ] **Mobile responsive** — Chrome DevTools (right-click → Inspect → mobile icon) pe test
+- [ ] **SEO done** — 600-word content + `<title>` + `<meta description>` + OG tags
+- [ ] **FAQ section** — questions + JSON-LD `FAQPage` schema
+- [ ] **Pages banaye** — Privacy Policy, About Us, Terms & Conditions, Contact Us (header + footer dono mein linked)
+- [ ] **Error pages** — custom 404 aur 500
+- [ ] **robots.txt** — sitemap link ke saath
+- [ ] **sitemap.xml** — Astro ke sahi tareeke se
+- [ ] **Google Analytics** — GA4 (gtag.js) lagaya, har page pe chalta hai
+- [ ] **`_headers` file** — `public/_headers` mein security + cache rules
+- [ ] **Workers use kar rahe ho?** — `.com` connect ke baad `workers.dev` disable +
+      `workers_dev = false` config mein likha
 - [ ] `npm run build` — bina error pass ho raha hai
 - [ ] `npm run dev` — mobile + desktop dono pe sahi dikh raha hai
 - [ ] Dark mode toggle kaam kar raha hai
-- [ ] 600-word SEO content home page pe hai
-- [ ] `<title>` + `<meta description>` + OG tags set hain
-- [ ] FAQ section + JSON-LD schema valid hai
-- [ ] Privacy Policy, Terms, About Us, Contact Us pages hain aur linked hain
-- [ ] 404 / 500 error pages custom hain
-- [ ] `robots.txt` + `sitemap.xml` hain
-- [ ] Favicon + logo lag gaya hai
-- [ ] Multiple languages (agar chahiye toh) alag URLs pe hain
+- [ ] Multiple languages (agar chahiye toh) alag URLs pe hain + hreflang markup + `<html lang>` sahi
+- [ ] Single-language convert (agar target ek country hai) — poora content localized, `/lang/` nahi
 - [ ] Git push ho gaya hai GitHub pe
 - [ ] Cloudflare se live deploy ho gaya hai
 - [ ] **Domain tabhi kharida** jab site live aur working ho
@@ -372,6 +622,9 @@ correct way to add it.
 ---
 
 ## Deploy (Cloudflare)
+
+Ye poora flow (GitHub push → Pages → domain connect) **[Part 4 — Deploy](Step4-Deploy.md)**
+mein hai. Quick peek:
 
 ```bash
 npx wrangler@latest deploy
@@ -384,4 +637,6 @@ auto build + deploy ho jayega.
 
 ## Deliverable
 
-A working website, live on your `.com` domain — built by AI, hosted on Cloudflare, at $0 cost.
+A working website, ready to go live — built by AI, at $0 cost.
+
+**Next:** [Step 5 — Deploy for $0](Step4-Deploy.md) (Part 4)

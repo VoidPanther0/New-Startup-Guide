@@ -5,6 +5,9 @@
 
 **Steps in this part:** Step 1 → Step 2 → Step 5 → Step 6
 
+> 💾 **Install kuch nahi karna** — Reddit, Quora, Ahrefs sab browser-based tools hain.
+> Sirf ek browser chahiye. (Coding ke liye install commands → [Part 3 — Build](Step3-Build.md))
+
 | Step | Topic | What you get |
 |------|-------|---------------|
 | [Step 1](#step-1--find-the-problem) | Find the Problem | 5–10 problem statements |
