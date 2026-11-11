@@ -294,3 +294,5 @@ sakte ho (Account → Sites → Add site). Har site ka apna ads.txt + policy pag
 
 **Approved AdSense account** with live ads on your site, `ads.txt` verified, payment details
 set — and a **12-month plan** of one new tool every month.
+
+**Next:** [Part 8 — Backlinks](Step8-Backlinks.md)

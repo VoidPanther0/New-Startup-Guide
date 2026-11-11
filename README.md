@@ -19,10 +19,11 @@ New Startup Guide/
     ├── Step4-Deploy.md         # Part 4 — Deploy
     ├── Step5-Cloudfare.md      # Part 5 — Cloudflare
     ├── Step6-SearchConsole.md  # Part 6 — Search Console
-    └── Step7-Earnings.md       # Part 7 — Earnings
+    ├── Step7-Earnings.md       # Part 7 — Earnings
+    └── Step8-Backlinks.md      # Part 8 — Backlinks
 ```
 
-## The 7 Parts
+## The 8 Parts
 
 ### Part 1 — Research & Validation
 
@@ -71,6 +72,12 @@ Find a real problem, prove demand, study rivals, and pick the keywords to attack
 
 ➡️ [Steps/Step7-Earnings.md](Steps/Step7-Earnings.md)
 
+### Part 8 — Backlinks
+
+- **8.1** Backlinks — types · own backlinks · interlink slowly · tracking
+
+➡️ [Steps/Step8-Backlinks.md](Steps/Step8-Backlinks.md)
+
 ## Quick overview
 
 | Part | What you do | Output |
@@ -82,6 +89,7 @@ Find a real problem, prove demand, study rivals, and pick the keywords to attack
 | **5. Cloudflare** | Buy domain → nameservers → SSL → email | Live at `yourdomain.com` |
 | **6. Search Console** | GA4 + GSC + sitemap + indexing + Bing | Indexed + tracked |
 | **7. Earnings** | AdSense apply → ads.txt → live ads | Passive income |
+| **8. Backlinks** | Interlink slowly → track with Ahrefs + GSC | Rankings + referral traffic |
 
 ## How Long Until You Start Earning?
 
@@ -187,6 +195,7 @@ Find a real problem, prove demand, study rivals, and pick the keywords to attack
 | **Google Analytics** | https://analytics.google.com |
 | **Google Search Console** | https://search.google.com/search-console/about |
 | **Bing Webmaster** | https://www.bing.com/webmasters/about |
+| **Ahrefs Backlink Checker** | https://ahrefs.com/backlink-checker |
 | IndexNow (instant indexing) | https://www.indexnow.org/documentation |
 | Redirect rules (www → apex) | https://developers.cloudflare.com/rules/url-forwarding/ |
 | Rules simulator | https://developers.cloudflare.com/rules/simulator/ |
